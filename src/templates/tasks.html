@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Tasks</h1>
+    <br>
+    <div>
+
+        <form  action="/task" method="post">
+            <label for="query">Enter Query:</label>
+            <input class="queryform" type="text" id="query" name="query" required>
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if tasks_lst %}
+
+        {% for task in tasks_lst %}
+        <br>
+            <li class="query">{{task}}</li>
+            <br>
+        {% endfor %}
+
+        {% endif %}
+    </div>
+
+
+    <footer>
+            <ul>
+                <li><a class="uploadData" href="{{ url_for('InsightFlow.insightflow') }}">InsightFlow</a></li>
+            </ul>
+    </footer>
+
+{% endblock %}

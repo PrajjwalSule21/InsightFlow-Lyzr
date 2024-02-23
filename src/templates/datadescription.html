@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+
+
+
+{% block content %}
+
+
+
+    <h1>Data Description</h1>
+
+        <div class="description">
+            <p>{{description}}</p>
+        </div>
+
+
+        <footer>
+                <ul>
+                    <li><a class="uploadData" href="{{ url_for('InsightFlow.insightflow') }}">InsightFlow</a></li>
+                </ul>
+        </footer>
+        
+   
+{% endblock %}

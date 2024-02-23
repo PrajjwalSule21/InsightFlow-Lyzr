@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+   <a class="uploadData" href="{{ url_for('InsightFlow.datadescription') }}">Data Description</a>
+
+   <a class="uploadData" href="{{ url_for('InsightFlow.dataqueries') }}">Queries</a>
+
+   <a class="uploadData" href="{{ url_for('InsightFlow.analysis_recommendation') }}">Analysis Recommendation</a>
+
+   <a class="uploadData" href="{{ url_for('InsightFlow.analysis') }}">Analysis</a>
+
+   <a class="uploadData" href="{{ url_for('InsightFlow.recommendation') }}">Recommendation</a>
+
+   <a class="uploadData" href="{{ url_for('InsightFlow.tasks') }}">Tasks</a>
+
+
+{% endblock %}

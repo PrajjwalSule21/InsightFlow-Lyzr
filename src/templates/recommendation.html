@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Recommendations</h1>
+    <br>
+    <div>
+
+        <form  action="/recommendation" method="post">
+            <label for="query">Enter Query:</label>
+            <input class="queryform" type="text" id="query" name="query" required>
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if recommendation_dict %}
+
+            {% for recommendation in recommendation_dict %}
+                <p><b>Recommendation: </b>{{recommendation['Recommendation']}}</p>
+                <p><b>Basis of the Recommendation: </b>{{recommendation['Basis of the Recommendation']}}</p>
+                <p><b>Impact if implemented: </b>{{recommendation['Impact if implemented']}}</p>
+                <br>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+
+    <footer>
+            <ul>
+                <li><a class="uploadData" href="{{ url_for('InsightFlow.insightflow') }}">InsightFlow</a></li>
+            </ul>
+    </footer>
+
+{% endblock %}

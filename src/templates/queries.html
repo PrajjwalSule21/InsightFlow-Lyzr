@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Data Queries</h1>
+    <br>
+    <div>
+        {% for query in queries %}
+            <li class="query">{{ query }} </li>
+          {% endfor %}
+    </div>
+
+
+    <footer>
+            <ul>
+                <li><a class="uploadData" href="{{ url_for('InsightFlow.insightflow') }}">InsightFlow</a></li>
+            </ul>
+    </footer>
+
+{% endblock %}
